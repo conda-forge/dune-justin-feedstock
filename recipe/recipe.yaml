@@ -23,9 +23,11 @@ package:
 source:
   url: https://github.com/DUNE/dune-justin/archive/refs/tags/${{ tag }}.tar.gz
   sha256: 56946816a47b89d8ec4c44a6bd36ba1ddc4f27b1ac728949d6ed115f8b66569e
+  patches:
+    - patches/os_release.patch
 
 build:
-  number: 0
+  number: 1
   skip:
     - win
   script: build.sh
